@@ -1,31 +1,58 @@
+@font-face {
+    font-family: Brush-Script-MT;
+    src: url("../fonts/Brush\ Script\ MT\ Regular.ttf")
+}
+
 :root {
     --primary-color: #f4e6c3;
     --secondary-color: #c0c0c0;
     --accent1-color: #8b1e1e;
     --accent2-color: #3b2f2f;
 
-    --heading-font: ;
-    --paragraph-font: ;
+    --heading-font: Brush-Script-MT;
+    --paragraph-font: 'Times New Roman', Times, serif;
 }
 
 #contentbox {
     background: var(--primary-color);
     margin: 40px auto;
-    width: 1080px;
+    width: 1024px;
 }
 
 header {
-    height: 100px;
+    height: 102px;
     display: grid;
-    grid-template-columns: 100px 1fr;
+    grid-template-columns: 102px 1fr;
+}
+
+header img {
+    height: 102px;
+    width: 102px;
+    font-family: 'Times New Roman', Times, serif;
 }
 
 nav {
     background: var(--secondary-color);
     padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    font-family: var(--paragraph-font);
+}
+
+main {
+    padding: 20px;
 }
 
 footer {
     background: var(--accent2-color);
-    height: 100px;
+    height: 102px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--heading-font);
+}
+
+p {
+    font-family: var(--paragraph-font);
 }
