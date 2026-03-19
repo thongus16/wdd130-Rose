@@ -37,7 +37,6 @@ nav {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    font-family: var(--paragraph-font);
 }
 
 main {
@@ -49,10 +48,42 @@ footer {
     height: 102px;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6{
     font-family: var(--heading-font);
 }
 
-p {
+p, a {
     font-family: var(--paragraph-font);
+}
+
+p {
+    text-indent: 30px;
+}
+
+#play_art-img {
+    float: right;
+    width: 472px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    margin-top: -20px;
+    margin-right: -20px;
+}
+
+#imgbox {
+    background: var(--accent1-color);
+    width: 784px;
+    margin: auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+}
+
+#map-img {
+    width: 100%;
+}
+
+#tenstep_guide-img {
+    width: 33%;
 }
