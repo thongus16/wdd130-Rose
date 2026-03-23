@@ -20,9 +20,6 @@
         </header>
 
         <main>
-            <h1>Page Title will go here.</h1>
-            <p>Content will go here.</p>
-
             <div class="dropdown">
                 <details>
                     <summary>The 1st Edition</summary>
@@ -45,9 +42,38 @@
                     <p>The fifth edition of Dungeons & Dragons 5th Edition was released in 2014 by Wizards of the Coast. This edition was designed to make the game simpler and easier to learn while still keeping the depth that longtime players enjoy. It brought back a stronger focus on storytelling, role-playing, and exploration, while using streamlined rules like the advantage and disadvantage system, where players roll two dice and take the higher or lower result depending on the situation. Fifth Edition also made character creation flexible with many races, classes, and backgrounds that help shape a character’s story. Because the rules are easier to learn and widely supported online through streams, podcasts, and digital tools, 5th Edition has become the most popular and widely played version of Dungeons & Dragons.</p>
                 </details>
             </div>
+            <div class="slideshow">
+                <img class="slide" id="beholder_art-img" src="images/beholder_art.jpg" alt="DnD Artwork">
+                <img class="slide" id="handbook1-img" src="images/handbook1.jpg" alt="DnD 2nd Edition Player's Handbook">
+                <img class="slide" id="handbook3-img" src="images/handbook3.jpg" alt="3 DnD Handbooks">
+                <img class="slide" id="handbook2-img" src="images/handbook2.jpg" alt="DnD Player's Handbook">
+                <a class="prev" onclick="plusSlides(-1)">&#11164;</a>
+                <a class="next" onclick="plusSlides(1)">&#11166;</a>
+            </div>
         </main>
         <footer></footer>
     </div>
+
+    <script>
+        let slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+        showSlides(slideIndex += n);
+        }
+
+        function showSlides(n) {
+        let i;
+        let slides = document.getElementsByClassName("slide");
+        if (n > slides.length) {slideIndex = 1}    
+        if (n < 1) {slideIndex = slides.length}
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";  
+        }
+
+        slides[slideIndex-1].style.display = "block";
+        }
+    </script>
 </body>
 
 </html>
