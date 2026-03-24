@@ -68,12 +68,44 @@ footer {
 
 h1, h2, h3, h4, h5, h6 {
     font-family: var(--heading-font);
+    text-align: center;
 }
 
-p, a {
+p, a, li {
     font-family: var(--paragraph-font);
 }
 
 p {
-    text-indent: 30px;
+    text-align: center;
+}
+
+img {
+    width: 67%;
+}
+
+section {
+    display: flex;
+    gap: 20px;
+    justify-content: space-around;
+}
+
+.listbox {
+    width: 100%;
+}
+
+#char_sheet2-img {
+    align-self: flex-start;
+    margin-right: -20px;
+    margin-top: -20px;
+}
+
+#char_sheet3-img {
+    align-self: center;
+    margin-left: -20px;
+}
+
+#char_sheet1-img {
+    align-self: flex-end;
+    margin-right: -20px;
+    margin-bottom: -20px;
 }
