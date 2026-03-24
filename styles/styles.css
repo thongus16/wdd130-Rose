@@ -13,6 +13,7 @@
     --paragraph-font: 'Times New Roman', Times, serif;
 }
 
+/*All pages*/
 .contentbox {
     background: var(--primary-color);
     margin: 40px auto;
@@ -57,10 +58,6 @@ nav a:hover {
     color: white;
 }
 
-main {
-    padding: 20px;
-}
-
 footer {
     background: var(--accent2-color);
     height: 102px;
@@ -70,12 +67,18 @@ h1, h2, h3, h4, h5, h6{
     font-family: var(--heading-font);
 }
 
-p, a {
+p, a, summary {
     font-family: var(--paragraph-font);
 }
 
 p {
     text-indent: 30px;
+}
+
+/*index.html*/
+
+#index-main {
+    padding: 20px
 }
 
 #play_art-img {
@@ -85,6 +88,7 @@ p {
     margin-left: 20px;
     margin-top: -20px;
     margin-right: -20px;
+    border: var(--accent1-color) solid 20px;
 }
 
 .imgbox {
@@ -104,4 +108,119 @@ p {
 
 #_10step_guide-img {
     width: 33%;
+}
+
+/*hystory.html*/
+.dropdown {
+    display: flex;
+    gap: 5px;
+    flex-direction: column;
+}
+
+.dropdown summary {
+    background-color: var(--accent1-color);
+    &::marker {
+        content: "";
+    }
+    &::after {
+        content: " \2B9D";
+    }
+}
+
+details[open] summary:after {
+    content: " \2B9F";
+}
+
+.dropdown details {
+    background-color: var(--accent2-color);
+}
+
+.dropdown p, .dropdown summary{
+    color: white;
+    padding: 10px;
+}
+
+.slideshow {
+    width: 100%;
+    height: 266px;
+    position: relative;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    background-color: var(--accent1-color);
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.slide {
+    display: none;
+    margin: auto;
+}
+
+#beholder_art-img {
+    padding: 46.5px;
+}
+
+#handbook1-img {
+    padding: 0px;
+}
+
+#handbook2-img {
+    padding: 4.5px;
+}
+
+#handbook3-img {
+    padding: 59px;
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 0%;
+    width: auto;
+    height: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    user-select: none;
+    background-color: var(--accent2-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.next {
+    right: 0;
+}
+
+/*howtoplay.html*/
+.listimg {
+    width: 67%;
+    display: flex;
+    background: var(--accent1-color);
+    padding: 20px;
+}
+
+section {
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+}
+
+.listbox {
+    width: 100%;
+    padding: 20px;
+}
+
+#char_sheet2-img {
+    align-self: flex-start;
+}
+
+#char_sheet3-img {
+    align-self: center;
+}
+
+#char_sheet1-img {
+    align-self: flex-end;
 }
